@@ -1,28 +1,33 @@
+$color: #302C34
 @mixin container()
     container
     width: 90%
     max-width: 1200px
     margin: auto
+@mixin input()
+    border: 1px solid #D9D9D9
+    border-radius: 2px
+    font-size: 16px
+    line-height: 24px
+    color: #BFBFBF 
 body 
     padding: 0
     margin: 0
+    font-family: 'Roboto', sans-serif
+    color: $color
 .header
     @include container
     display: flex
     justify-content: space-between
     margin-top: 44px
-    height: 40px
+    height: 40px   
 .search-input
     height: 40px
     width: 690px
-    border: 1px solid #D9D9D9
-    border-radius: 2px
+    @include input
     background-image: url(../img/home.svg)
     background-repeat: no-repeat
     background-position: left 10px center
-    font-size: 16px
-    line-height: 24px
-    color: #BFBFBF 
     padding-left: 32px
 .button
     background: none
@@ -49,4 +54,115 @@ body
     background-repeat: no-repeat
     background-position: left 16px center
     color: #595959
-    
+.promo
+    @include container
+    height: 300px
+    background: #FFF1B8
+    border-radius: 10px
+    background-image: url(../img/promo.png) 
+    background-repeat: no-repeat
+    background-position: right -200px center
+    margin-top: 40px
+.promo-title
+    margin: 0
+    margin-left: 70px
+    padding-top: 68px
+    margin-bottom: 15px
+    font-weight: bold
+    font-size: 39px
+    line-height: 46px
+.promo-paragraph
+    margin: 0
+    margin-left: 70px
+    margin-bottom: 68px
+    font-weight: normal
+    font-size: 24px
+    line-height: 28px
+    max-width: 538px
+.restaurant
+    @include container
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-top: 56px
+    margin-bottom: 60px
+.restaurant-title
+    margin: 0
+    font-size: 36px
+    line-height: 42px
+    color: #000000
+.cards
+    flex-basis: 100%
+    margin-top: 34px
+    display: flex
+    flex-wrap: wrap
+.card
+    flex-basis: 30%
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05)
+    border-radius: 7px
+    margin-right: 14px
+    margin-bottom: 30px
+.card img
+    border-radius: 7px 7px 0px 0px
+.text-box
+    @include container
+    display: flex
+    flex-wrap: wrap
+    justify-content: flex-start
+    margin-bottom: 34px
+.name-restaurant
+    flex-basis: 50%
+    font-weight: bold
+    font-size: 24px
+    line-height: 32px
+    color: #000000
+    margin: 20px 0px 10px 0px
+.time
+    margin-left: 100px
+    align-self: center
+    width: 55px
+    height: 22px
+    background: #262626
+    border-radius: 2px
+    color: #FFFFFF
+    padding: 1px 8px
+.rating
+    flex-basis: 20%
+    padding-left: 22px
+    background-image: url(../img/star.png)
+    background-size: 15px
+    background-repeat: no-repeat
+    background-position: left top 7px
+    font-weight: bold
+    font-size: 18px
+    line-height: 32px
+    color: #FFC107
+.price
+    flex-basis: 30%
+    font-weight: normal
+    font-size: 18px
+    line-height: 32px
+    color: #8C8C8C
+.price::after
+    content: " "
+    width: 5px
+    height: 5px
+    border-radius: 50%
+    background: #8C8C8C
+    display: inline-block
+    vertical-align: middle
+    margin-left: 15px
+.category
+    flex-basis: 30%
+    font-weight: normal
+    font-size: 18px
+    line-height: 32px
+    color: #8C8C8C
+.input-search
+    @include input
+    width: 306px
+    height: 34px
+    background-image: url(../img/search.svg)
+    background-repeat: no-repeat
+    background-position: left 10px center
+    padding-left: 32px
