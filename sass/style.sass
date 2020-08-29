@@ -1,6 +1,5 @@
 $color: #302C34
 @mixin container()
-    container
     width: 90%
     max-width: 1200px
     margin: auto
@@ -183,25 +182,29 @@ body
     margin-right: 15px
 .icons a:not(:last-child)
     margin-right: 21px
-
+.section
+    min-width: 100%
+    //max-width: 100%
+    background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%)
+    padding-bottom: 50px
+    
 @media (max-width: 1200px)
     .search-input
-        flex: 0.8
+        flex: 1
 @media (max-width: 992px)
     .promo
         background-image: none
-    .restaurant-title
-        flex-basis: 100%
     .input-search
         order: -1
         margin-bottom: 34px
         margin-top: 34px
+        min-width: 306px
 @media (max-width: 768px)
-    .promo
-        padding-right: 30px
+    .restaurant-title
+        flex-basis: 100%  
     .promo-title
-        margin-left: 0
-        text-align: center
+        margin-left: 30px
+        text-align: justify
     .promo-paragraph
         margin-left: 30px
         text-align: justify
@@ -221,24 +224,32 @@ body
         margin-bottom: 10px
     .promo
         margin: 0
-        width: 80%
         margin-top: 100px
         height: auto
         padding-bottom: 20px
-        margin-left: 14px
-        margin-right: 14px
-        padding-left: 30px
-        padding-right: 50px
+        padding-left: 14px
+        padding-right: 14px
+        margin-left: 5px
+    .card img
+        width: 306px
+    .promo-title
+        margin-left: 0
+        text-align: none
+    .promo-paragraph
+        margin-left: 0
+        text-align: none
     .restaurant
         margin: 0
-        width: 60%
-        margin-left: 10px
-    .card
-        margin-right: 10px
+        margin-left: 14px
+    .text-box 
+        flex-direction: column
     .footer>div
         height: auto
         margin-top: 20px
         margin-bottom: 20px
+    .time
+        margin-left: 0
+        align-self: flex-start
     .footer-menu
         display: flex
-        flex-direction: column     
+        flex-direction: column
