@@ -112,7 +112,6 @@ body {
 }
 
 .cards {
-  flex-basis: 100%;
   margin-top: 34px;
   display: flex;
   flex-wrap: wrap;
@@ -253,6 +252,10 @@ body {
   }
 }
 @media (max-width: 992px) {
+  .card {
+    flex-basis: 50%;
+  }
+
   .promo {
     background-image: none;
   }
@@ -263,10 +266,22 @@ body {
     margin-top: 34px;
     min-width: 306px;
   }
+
+  .restaurant-title {
+    flex-basis: 100%;
+  }
+
+  .search-input {
+    order: 1;
+  }
 }
 @media (max-width: 768px) {
   .restaurant-title {
     flex-basis: 100%;
+  }
+
+  .search-input {
+    order: 1;
   }
 
   .promo-title {
