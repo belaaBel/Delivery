@@ -91,16 +91,18 @@ body
     line-height: 42px
     color: #000000
 .cards
-    //flex-basis: 100%
     margin-top: 34px
     display: flex
     flex-wrap: wrap
     justify-content: space-between
 .card
     flex-basis: 30%
+    background: #FFFFFF
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05)
     border-radius: 7px
     margin-bottom: 30px
+.card:nth-child(3n+3)
+    margin-right: 0
 .card img
     border-radius: 7px 7px 0px 0px
 .text-box
@@ -110,7 +112,6 @@ body
     justify-content: flex-start
     margin-bottom: 34px
 .name-restaurant
-    flex-basis: 50%
     font-weight: bold
     font-size: 24px
     line-height: 32px
@@ -184,18 +185,83 @@ body
     margin-right: 21px
 .section
     min-width: 100%
-    //max-width: 100%
     background: linear-gradient(180deg, rgba(245, 245, 245, 0) 1.04%, #F5F5F5 100%)
     padding-bottom: 50px
-    
+.restaurant-box
+    margin-top: 40px
+    margin-right: 800px
+    padding-top: 10px
+    width: auto
+    display: inline-block
+.restaurant-box .rating, .restaurant-box .price, .restaurant-box .category
+    display: inline-block
+.restaurant-box .rating
+    margin-left: 35px
+.restaurant-box .price
+    margin-left: 26px
+.restaurant-box .category
+    margin-left: 10px
+.card-text
+    @include container
+    margin-top: 24px
+.food-name
+    font-weight: normal
+    font-size: 24px
+    line-height: 32px
+    margin-bottom: 10px
+.food-text
+    font-size: 18px
+    line-height: 21px
+    color: #8C8C8C
+    margin-bottom: 24px
+.food-price
+    display: inline
+    font-weight: bold
+    font-size: 20px
+    line-height: 32px
+    margin-left: 32px
+.in-cart
+    margin: 0
+    border: none
+    background: #1890FF
+    border-radius: 2px
+    font-weight: normal
+    font-size: 16px
+    line-height: 24px
+    color: #FFFFFF
+    margin-bottom: 30px
+    padding-right: 36px
+    padding-left: 16px
+    padding-top: 8px
+    padding-bottom: 8px
+    background-image: url(../img/shopping-cart-white.svg)
+    background-repeat: no-repeat
+    background-position: right 16px center
+.restaurant-name
+    margin-top: 40px
 @media (max-width: 1200px)
+    .restaurant-box
+        display: flex
+    .restaurant-box .rating, .restaurant-box .price, .restaurant-box .category
+        margin-left: 0
+    .restaurant-box .price
+        width: 250px
     .search-input
         flex: 1
-@media (max-width: 992px)
-    // body 
-    //     background: red
+    .cards
+        justify-content: space-between
     .card
-        flex-basis: 50%
+        margin-right: 0
+        width: 330px
+    .card img
+        width: 330px
+    .card:nth-child(2n)
+        margin-right: 0
+@media (max-width: 992px)
+    .card
+        width: 350px
+    .card img
+        width: 350px
     .promo
         background-image: none
     .input-search
@@ -205,22 +271,27 @@ body
         min-width: 306px
     .restaurant-title
         flex-basis: 100%  
-    .search-input
-        order: 1
 @media (max-width: 768px)
-    
-    // body 
-    //     background: pink
+    .header
+        flex-wrap: wrap
+    .restaurant-box
+        margin-top: 0
+    .restaurant-name
+        margin-top: 20
     .restaurant-title
         flex-basis: 100%  
-    .search-input
-        order: 1
+    .section
+        padding-top: 20
     .promo-title
         margin-left: 30px
         text-align: justify
     .promo-paragraph
         margin-left: 30px
         text-align: justify
+    .card
+        width: 306px
+    .card img
+        width: 306px
     .footer>div
         flex-direction: column
         justify-content: center
@@ -228,9 +299,29 @@ body
     .footer-menu
         margin-top: 20px
         margin-bottom: 20px
+    .text-box 
+        flex-direction: column
+    .time
+        margin-left: 0
+        align-self: flex-start
 @media (max-width: 576px)
+    .buttons
+        margin-top: 10px
+    .restaurant-title
+        @include container
+    .restaurant-name
+        margin-right: 0
+        padding-top: 0
+        margin-bottom: 10px
+    .restaurant-box
+        margin-top: 0
+        display: flex
+        flex-direction: column
+        padding-top: 0 
+        margin-bottom: 10px
     .header
         flex-wrap: wrap
+        margin-bottom: 100px
     .search-input
         order: 1
         margin-top: 10px
@@ -242,9 +333,17 @@ body
         padding-bottom: 20px
         padding-left: 14px
         padding-right: 14px
-        margin-left: 5px
+        margin-left: 0
+        @include container
+    .section
+        @include container
+        padding-top: 0
+    .input-search
+        min-width: 0
+    .card
+        width: 294px
     .card img
-        width: 306px
+        width: 294px
     .promo-title
         margin-left: 0
         text-align: none
@@ -253,16 +352,35 @@ body
         text-align: none
     .restaurant
         margin: 0
-        margin-left: 14px
+        @include container
     .text-box 
         flex-direction: column
     .footer>div
         height: auto
         margin-top: 20px
         margin-bottom: 20px
+    .name-restaurant
+        flex-basis: 0%
     .time
         margin-left: 0
         align-self: flex-start
+        flex-basis: 0%
+    .rating
+        flex-basis: 0%
+    .category
+        flex-basis: 0%
+    .price
+        flex-basis: 0%
     .footer-menu
         display: flex
         flex-direction: column
+    .card:nth-child(2n + 1) 
+        margin-right: 0
+    .promo-title
+        font-weight: bold
+        font-size: 30px
+        line-height: 37px
+    .promo-paragraph
+        font-weight: normal
+        font-size: 20px
+        line-height: 24px
