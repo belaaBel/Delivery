@@ -6,9 +6,10 @@
 </head>
 <link rel="stylesheet" href="./css/style.css">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-<body>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+<body class = "body-scroll">
     <header class="header">
-        <a href="./index.html"><img src="./img/logo.png" alt="logo" class="logo"></a>
+        <a href="./index.html" class="animate__animated animate__heartBeat"><img src="./img/logo.png" alt="logo" class="logo"></a>
         <input type="text" class="input search-input" placeholder="Адрес доставки">
         <div class="buttons">
             <button class="button sign-in">Войти</button>
@@ -19,8 +20,8 @@
     <div class="section">
         <div class="promo">
          
-            <h1 class="promo-title">Онлайн-сервис<br>доставки еды на дом</h1>
-            <p class="promo-paragraph">Блюда из любимого ресторана привезет курьер в перчатках, маске и с антисептиком</p>
+            <h1 class="promo-title animate__animated animate__fadeInLeftBig animate__slow">Онлайн-сервис<br>доставки еды на дом</h1>
+            <p class="promo-paragraph animate__animated animate__fadeInLeftBig animate__delay-1s animate__slower">Блюда из любимого ресторана привезет курьер в перчатках, маске и с антисептиком</p>
         
         </div>
 
@@ -90,10 +91,7 @@
                 </div>
             </div>
         </div>
-    </div>
-       
-       
-   
+    </div>  
 
     <footer class="footer">
         <div>
@@ -111,5 +109,59 @@
             </nav>
         </div>
     </footer>
+
+    <div class="model">
+        <div class="model-body">
+            <div class="model-header">
+                <h2>Корзина</h2>
+                <button class="close-model">&times;</button>
+            </div>
+            <div class="carts-model">
+                <div class="cart">
+                    <p>Ролл угорь стандарт</p>
+                    <h5 class="cart-price">250 ₽</h5>
+                    <button class="minus-plus">-</button>
+                    <p class="count">1</p>
+                    <button class="minus-plus">+</button>
+                </div>
+                <div class="cart">
+                    <p>Ролл угорь стандарт</p>
+                    <h5 class="cart-price">250 ₽</h5>
+                    <button class="minus-plus">-</button>
+                    <p class="count">1</p>
+                    <button class="minus-plus">+</button>
+                </div>
+                <div class="cart">
+                    <p>Ролл угорь стандарт</p>
+                    <h5 class="cart-price">250 ₽</h5>
+                    <button class="minus-plus">-</button>
+                    <p class="count">1</p>
+                    <button class="minus-plus">+</button>
+                </div>
+                <div class="cart">
+                    <p>Ролл угорь стандарт</p>
+                    <h5 class="cart-price">250 ₽</h5>
+                    <button class="minus-plus">-</button>
+                    <p class="count">1</p>
+                    <button class="minus-plus">+</button>
+                </div>
+                <div class="cart">
+                    <p>Ролл угорь стандарт</p>
+                    <h5 class="cart-price">250 ₽</h5>
+                    <button class="minus-plus">-</button>
+                    <p class="count">1</p>
+                    <button class="minus-plus">+</button>
+                </div>
+            </div>
+            <div class="model-footer">
+                <p class="summ-price">1250 ₽</p>
+                <div class="group-button">
+                    <button class="button btn-cart">Оформить заказ</button>
+                    <button class="button btn-close">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
 </body>
 </html>
